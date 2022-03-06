@@ -16,7 +16,11 @@
     "word-list-json": "^0.2.0"
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "node server",
+    "dev": "run-p dev:client dev:server",
+    "dev:client": "npm run webpack -- --watch",
+    "dev:server": "nodemon --watch server server/index.js",
+    "webpack": "webpack --config ./client/webpack.config.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
