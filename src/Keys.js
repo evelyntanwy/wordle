@@ -3,7 +3,7 @@ import React from "react";
 function Keys() {
   return (
     <div>
-      Keys
+      <h3>Keys</h3>
       <button>Q</button>
       <button>W</button>
       <button>E</button>

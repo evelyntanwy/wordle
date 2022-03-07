@@ -4,8 +4,8 @@ import Keys from "./Keys";
 function App() {
   return (
     <div className="App">
-      <h3>Here we go</h3>
-      {/* <Keys /> */}
+      <h1>Hello Wordle</h1>
+      <Keys />
     </div>
   );
 }
