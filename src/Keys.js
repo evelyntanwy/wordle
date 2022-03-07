@@ -1,37 +1,106 @@
-import React from "react";
+import React, { useState } from "react";
 
 function Keys() {
+  const [keyOn, setKeyOn] = useState("");
+
+  const handleClick = (evt) => {
+    console.log(evt.target.value);
+    setKeyOn(...keyOn, evt.target.value);
+    console.log("keyOn", ...keyOn);
+  };
+
   return (
     <div>
-      <h3>Keys</h3>
-      <button>Q</button>
-      <button>W</button>
-      <button>E</button>
-      <button>R</button>
-      <button>T</button>
-      <button>Y</button>
-      <button>U</button>
-      <button>I</button>
-      <button>O</button>
-      <button>P</button>
+      <h3>Word of the Day</h3>
+      <form>
+        <input
+          type="text"
+          onChange={(evt) => setKeyOn(handleClick)}
+          value={keyOn}
+        />
+      </form>
       <br />
-      <button>A</button>
-      <button>S</button>
-      <button>D</button>
-      <button>F</button>
-      <button>G</button>
-      <button>H</button>
-      <button>J</button>
-      <button>K</button>
-      <button>L</button>
+      <h4>Keyboard</h4>
+      <button onClick={handleClick} value="Q">
+        Q
+      </button>
+      <button onClick={handleClick} value="W">
+        W
+      </button>
+      <button onClick={handleClick} value="E">
+        E
+      </button>
+      <button onClick={handleClick} value="R">
+        R
+      </button>
+      <button onClick={handleClick} value="T">
+        T
+      </button>
+      <button onClick={handleClick} value="Y">
+        Y
+      </button>
+      <button onClick={handleClick} value="U">
+        U
+      </button>
+      <button onClick={handleClick} value="I">
+        I
+      </button>
+      <button onClick={handleClick} value="O">
+        O
+      </button>
+      <button onClick={handleClick} value="P">
+        P
+      </button>
       <br />
-      <button>Z</button>
-      <button>X</button>
-      <button>C</button>
-      <button>V</button>
-      <button>B</button>
-      <button>N</button>
-      <button>M</button>
+      <button onClick={handleClick} value="A">
+        A
+      </button>
+      <button onClick={handleClick} value="S">
+        S
+      </button>
+      <button onClick={handleClick} value="D">
+        D
+      </button>
+      <button onClick={handleClick} value="F">
+        F
+      </button>
+      <button onClick={handleClick} value="G">
+        G
+      </button>
+      <button onClick={handleClick} value="H">
+        H
+      </button>
+      <button onClick={handleClick} value="J">
+        J
+      </button>
+      <button onClick={handleClick} value="K">
+        K
+      </button>
+      <button onClick={handleClick} value="L">
+        L
+      </button>
+      <br />
+      <button onClick={handleClick} value="Z">
+        Z
+      </button>
+      <button onClick={handleClick} value="X">
+        X
+      </button>
+      <button onClick={handleClick} value="C">
+        C
+      </button>
+      <button onClick={handleClick} value="V">
+        V
+      </button>
+      <button onClick={handleClick} value="B">
+        B
+      </button>
+      <button onClick={handleClick} value="N">
+        N
+      </button>
+      <button onClick={handleClick} value="M">
+        M
+      </button>
       <button>Del</button>
       <button>Enter</button>
     </div>
