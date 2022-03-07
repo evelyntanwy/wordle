@@ -3,11 +3,17 @@ import React, { useState } from "react";
 function Keys() {
   const [keyOn, setKeyOn] = useState("");
   const [keyTwo, setKeyTwo] = useState([...keyOn]);
+  const [keyThree, setKeyThree] = useState([...keyTwo]);
+  const [keyFour, setKeyFour] = useState([...keyThree]);
+  const [keyFive, setKeyFive] = useState([...keyFour]);
 
   const handleClick = (evt) => {
     console.log(evt.target.value);
     setKeyOn(evt.target.value);
     setKeyTwo(keyOn);
+    setKeyThree(keyTwo);
+    setKeyFour(keyThree);
+    setKeyFive(keyFour);
   };
 
   const handleChange = () => {
@@ -18,7 +24,12 @@ function Keys() {
     <div>
       <h3>Word of the Day</h3>
       <form>
-        <input type="text" onChange={handleClick} value={keyOn + keyTwo} />
+        <input
+          maxLength={5}
+          type="text"
+          onChange={handleClick}
+          value={keyFive + keyFour + keyThree + keyTwo + keyOn}
+        />
       </form>
       <br />
       <h4>Keyboard</h4>
