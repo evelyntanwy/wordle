@@ -2,22 +2,23 @@ import React, { useState } from "react";
 
 function Keys() {
   const [keyOn, setKeyOn] = useState("");
+  const [keyTwo, setKeyTwo] = useState([...keyOn]);
 
   const handleClick = (evt) => {
     console.log(evt.target.value);
-    setKeyOn(...keyOn, evt.target.value);
-    console.log("keyOn", ...keyOn);
+    setKeyOn(evt.target.value);
+    setKeyTwo(keyOn);
+  };
+
+  const handleChange = () => {
+    setKeyOn(keyOn);
   };
 
   return (
     <div>
       <h3>Word of the Day</h3>
       <form>
-        <input
-          type="text"
-          onChange={(evt) => setKeyOn(handleClick)}
-          value={keyOn}
-        />
+        <input type="text" onChange={handleClick} value={keyOn + keyTwo} />
       </form>
       <br />
       <h4>Keyboard</h4>
