@@ -1,4 +1,8 @@
-# Getting Started with Create React App
+# Wordle
+
+To create a similar concept functionality with wordle using react.
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
