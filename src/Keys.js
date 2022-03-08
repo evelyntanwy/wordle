@@ -2,23 +2,6 @@ import React, { useState } from "react";
 
 function Keys() {
   const [keyOn, setKeyOn] = useState("");
-  const [keyTwo, setKeyTwo] = useState([...keyOn]);
-  const [keyThree, setKeyThree] = useState([...keyTwo]);
-  const [keyFour, setKeyFour] = useState([...keyThree]);
-  const [keyFive, setKeyFive] = useState([...keyFour]);
-
-  const handleClick = (evt) => {
-    console.log(evt.target.value);
-    setKeyOn(evt.target.value);
-    setKeyTwo(keyOn);
-    setKeyThree(keyTwo);
-    setKeyFour(keyThree);
-    setKeyFive(keyFour);
-  };
-
-  const handleChange = () => {
-    setKeyOn(keyOn);
-  };
 
   return (
     <div>
@@ -27,91 +10,92 @@ function Keys() {
         <input
           maxLength={5}
           type="text"
-          onChange={handleClick}
-          value={keyFive + keyFour + keyThree + keyTwo + keyOn}
+          //   onChange={handleClick}
+          //   value={keyFive + keyFour + keyThree + keyTwo + keyOn}
+          value={keyOn}
         />
       </form>
       <br />
 
       <h4>Keyboard</h4>
-      <button onClick={handleClick} value="Q">
+      <button onClick={() => setKeyOn(keyOn + "Q")} value="Q">
         Q
       </button>
-      <button onClick={handleClick} value="W">
+      <button onClick={() => setKeyOn(keyOn + "W")} value="W">
         W
       </button>
-      <button onClick={handleClick} value="E">
+      <button onClick={() => setKeyOn(keyOn + "E")} value="E">
         E
       </button>
-      <button onClick={handleClick} value="R">
+      <button onClick={() => setKeyOn(keyOn + "R")} value="R">
         R
       </button>
-      <button onClick={handleClick} value="T">
+      <button onClick={() => setKeyOn(keyOn + "T")} value="T">
         T
       </button>
-      <button onClick={handleClick} value="Y">
+      <button onClick={() => setKeyOn(keyOn + "Y")} value="Y">
         Y
       </button>
-      <button onClick={handleClick} value="U">
+      <button onClick={() => setKeyOn(keyOn + "U")} value="U">
         U
       </button>
-      <button onClick={handleClick} value="I">
+      <button onClick={() => setKeyOn(keyOn + "I")} value="I">
         I
       </button>
-      <button onClick={handleClick} value="O">
+      <button onClick={() => setKeyOn(keyOn + "O")} value="O">
         O
       </button>
-      <button onClick={handleClick} value="P">
+      <button onClick={() => setKeyOn(keyOn + "P")} value="P">
         P
       </button>
       <br />
-      <button onClick={handleClick} value="A">
+      <button onClick={() => setKeyOn(keyOn + "A")} value="A">
         A
       </button>
-      <button onClick={handleClick} value="S">
+      <button onClick={() => setKeyOn(keyOn + "S")} value="S">
         S
       </button>
-      <button onClick={handleClick} value="D">
+      <button onClick={() => setKeyOn(keyOn + "D")} value="D">
         D
       </button>
-      <button onClick={handleClick} value="F">
+      <button onClick={() => setKeyOn(keyOn + "F")} value="F">
         F
       </button>
-      <button onClick={handleClick} value="G">
+      <button onClick={() => setKeyOn(keyOn + "G")} value="G">
         G
       </button>
-      <button onClick={handleClick} value="H">
+      <button onClick={() => setKeyOn(keyOn + "H")} value="H">
         H
       </button>
-      <button onClick={handleClick} value="J">
+      <button onClick={() => setKeyOn(keyOn + "J")} value="J">
         J
       </button>
-      <button onClick={handleClick} value="K">
+      <button onClick={() => setKeyOn(keyOn + "K")} value="K">
         K
       </button>
-      <button onClick={handleClick} value="L">
+      <button onClick={() => setKeyOn(keyOn + "L")} value="L">
         L
       </button>
       <br />
-      <button onClick={handleClick} value="Z">
+      <button onClick={() => setKeyOn(keyOn + "Z")} value="Z">
         Z
       </button>
-      <button onClick={handleClick} value="X">
+      <button onClick={() => setKeyOn(keyOn + "X")} value="X">
         X
       </button>
-      <button onClick={handleClick} value="C">
+      <button onClick={() => setKeyOn(keyOn + "C")} value="C">
         C
       </button>
-      <button onClick={handleClick} value="V">
+      <button onClick={() => setKeyOn(keyOn + "V")} value="V">
         V
       </button>
-      <button onClick={handleClick} value="B">
+      <button onClick={() => setKeyOn(keyOn + "B")} value="B">
         B
       </button>
-      <button onClick={handleClick} value="N">
+      <button onClick={() => setKeyOn(keyOn + "N")} value="N">
         N
       </button>
-      <button onClick={handleClick} value="M">
+      <button onClick={() => setKeyOn(keyOn + "M")} value="M">
         M
       </button>
       <button>Del</button>
