@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import RICIBs from "react-individual-character-input-boxes";
 
 function Keys() {
   const [keyOn, setKeyOn] = useState("");
@@ -6,15 +7,21 @@ function Keys() {
   return (
     <div>
       <h3>Word of the Day</h3>
-      <form>
-        <input
-          maxLength={5}
-          type="text"
-          //   onChange={handleClick}
-          //   value={keyFive + keyFour + keyThree + keyTwo + keyOn}
-          value={keyOn}
-        />
-      </form>
+      <RICIBs
+        amount={5}
+        autoFocus
+        handleOutputString={keyOn}
+        inputProps={keyOn}
+      />
+
+      <input
+        maxLength={5}
+        type="text"
+        //   onChange={handleClick}
+        //   value={keyFive + keyFour + keyThree + keyTwo + keyOn}
+        value={keyOn}
+      />
+
       <br />
 
       <h4>Keyboard</h4>
