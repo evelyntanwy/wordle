@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import Grid from "@mui/material/Grid";
 
 function Keys() {
   const [keyOn, setKeyOn] = useState("");
@@ -7,16 +8,18 @@ function Keys() {
     <div>
       <h3>Word of the Day</h3>
 
-      <div>{keyOn}</div>
-
-      {/* <input
-        maxLength={5}
-        type="text"
-        //   onChange={handleClick}
-        //   value={keyFive + keyFour + keyThree + keyTwo + keyOn}
-        value={keyOn}
-      /> */}
-
+      <div>
+        <Grid
+          item
+          xs={5}
+          container
+          direction="row"
+          justifyContent="center"
+          alignItems="center"
+        >
+          {keyOn}
+        </Grid>
+      </div>
       <br />
 
       <h4>Keyboard</h4>
